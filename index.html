@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SentinelAI | Cyber Defense Assistant</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PARTICLES BACKGROUND -->
+<div id="particles"></div>
+
+<!-- APP WRAPPER -->
+<div class="app">
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar">
+
+  <div class="sidebar-top">
+
+    <div class="logo">
+      <div class="logo-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+
+      <div>
+        <h2>SentinelAI</h2>
+        <span class="brand-subtitle">Cyber Guardian</span>
+      </div>
+
+    </div>
+
+    <button id="newChatBtn" class="new-chat">
+      <i class="fa-solid fa-plus"></i>
+      New Chat
+    </button>
+
+  </div>
+
+  <div class="sidebar-menu">
+    <div class="menu-item active">
+      <i class="fa-solid fa-message"></i>
+      <span>Chats</span>
+    </div>
+
+    <div class="menu-item">
+      <i class="fa-solid fa-user-secret"></i>
+      <span>Agents</span>
+    </div>
+
+    <div class="menu-item">
+      <i class="fa-solid fa-radar"></i>
+      <span>Threat Scanner</span>
+    </div>
+
+    <div class="menu-item">
+      <i class="fa-solid fa-microchip"></i>
+      <span>Cyber Tools</span>
+    </div>
+
+    <div class="menu-item">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <span>History</span>
+    </div>
+
+    <div class="menu-item">
+      <i class="fa-solid fa-gear"></i>
+      <span>Settings</span>
+    </div>
+  </div>
+
+  <div id="recentChats" class="recent-chats">
+    <h4>RECENT CHATS</h4>
+  </div>
+
+</aside>
+
+<!-- ================= MAIN CHAT ================= -->
+<main class="chat-area">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+
+    <div>
+      <h1>SentinelAI</h1>
+      <p>Your AI Cyber Defense Assistant</p>
+    </div>
+
+    <!-- ✅ UPDATED STATUS BLOCK -->
+    <div id="serverStatus" class="status checking">
+      <span class="dot"></span>
+      CHECKING...
+    </div>
+
+  </header>
+
+  <!-- CHAT BOX -->
+  <div id="chat" class="chat-container"></div>
+
+  <!-- TYPING INDICATOR -->
+  <div class="typing-indicator hidden">
+    <div class="scan-ring"></div>
+    <div class="typing-text">Analyzing Threat Patterns...</div>
+  </div>
+
+  <!-- INPUT AREA -->
+  <div class="chat-input">
+
+    <button id="uploadBtn" class="attach-btn">
+      <i class="fa-solid fa-paperclip"></i>
+    </button>
+
+    <textarea id="userInput" placeholder="Ask SentinelAI anything..."></textarea>
+
+    <button id="sendBtn">
+      <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+    <button id="translateBtn">
+      বাংলা
+    </button>
+
+  </div>
+
+</main>
+
+<!-- ================= RIGHT PANEL ================= -->
+<aside class="info-panel">
+
+  <div class="panel-card">
+    <h3>Threat Level</h3>
+    <div class="big-stat">LOW</div>
+  </div>
+
+  <div class="panel-card">
+    <h3>Security Index</h3>
+    <div class="big-stat">98%</div>
+  </div>
+
+  <div class="panel-card">
+    <h3>Neural Usage</h3>
+    <div class="big-stat">72%</div>
+  </div>
+
+  <div class="panel-card">
+    <h3>System Status</h3>
+    <div class="big-stat success">SECURE</div>
+  </div>
+
+</aside>
+
+</div>
+
+<!-- TOAST SYSTEM -->
+<div id="toastContainer"></div>
+
+<!-- FILE INPUT -->
+<input type="file" id="fileInput" hidden>
+
+<!-- SOUND -->
+<audio id="botSound"></audio>
+
+<!-- PARTICLES JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
